@@ -8,9 +8,22 @@
 import Foundation
 
 class ViewModel {
-    private let dataService = WorkoutDataService()
+    private let dataService = FCDataService()
+    
+    func loadTrainers() async {
+        do {
+            let trainers = try await dataService.loadTrainers()
+            print(trainers)
+        } catch {
+            print(error)
+        }
+    }
     
     func loadWorkouts() async {
-        let workouts = await dataService.loadWorkouts()
+        do {
+            let workouts = try await dataService.loadWorkouts()
+        } catch {
+            print(error)
+        }
     }
 }

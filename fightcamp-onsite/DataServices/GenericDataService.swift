@@ -26,7 +26,7 @@ enum NetworkError: Error {
 }
 
 class GenericDataService {
-    static func loadJSON<T: Decodable>(from url: URL, page: Int = 1, pageSize: Int = 20, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    static func loadJSON<T: Decodable>(from url: URL, page: Int = 1, pageSize: Int = 20) async throws -> T {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         components?.queryItems = [
             URLQueryItem(name: "page", value: "\(page)"),
@@ -34,28 +34,22 @@ class GenericDataService {
         ]
         
         guard let apiUrl = components?.url else {
-            completion(.failure(.invalidURL))
-            return
+            throw NetworkError.invalidURL
         }
         
-        URLSession.shared.dataTask(with: apiUrl) { data, response, error in
-            if let error = error {
-                completion(.failure(.requestFailed(error)))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.invalidResponse))
-                return
-            }
-            
-            do {
-                let jsonDecoder = JSONDecoder()
-                let decodedObject = try jsonDecoder.decode(T.self, from: data)
-                completion(.success(decodedObject))
-            } catch let error {
-                completion(.failure(.jsonDecodingFailed(error)))
-            }
-        }.resume()
+        let (data, response) = try await URLSession.shared.data(from: apiUrl)
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw NetworkError.invalidResponse
+        }
+        
+        do {
+            let jsonDecoder = JSONDecoder()
+            let decodedObject = try jsonDecoder.decode(T.self, from: data)
+            return decodedObject
+        } catch let error {
+            throw NetworkError.jsonDecodingFailed(error)
+        }
     }
+
 }

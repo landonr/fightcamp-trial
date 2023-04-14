@@ -19,6 +19,13 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+        Task {
+            do {
+                _ = await viewModel.loadTrainers()
+            } catch {
+                print(error)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
