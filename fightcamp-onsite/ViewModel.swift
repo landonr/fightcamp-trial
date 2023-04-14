@@ -8,12 +8,22 @@
 import Foundation
 
 class ViewModel {
-    private let dataService = FCDataService()
+    private let workoutService: IWorkoutDataService = WorkoutDataService()
+    private let trainerService: ITrainerDataService = TrainerDataService()
     
     func loadTrainers() async {
         do {
-            let trainers = try await dataService.loadTrainers()
-            print(trainers)
+            let trainers = try await trainerService.loadTrainers()
+//            print(trainers)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func loadTrainer(id: Int) async {
+        do {
+            let trainer = try await trainerService.loadTrainer(id: id)
+            print(trainer)
         } catch {
             print(error)
         }
@@ -21,7 +31,10 @@ class ViewModel {
     
     func loadWorkouts() async {
         do {
-            let workouts = try await dataService.loadWorkouts()
+            let workouts = try await workoutService.loadWorkouts()
+            for workout in workouts.items {
+                await loadTrainer(id: workout.trainerID)
+            }
         } catch {
             print(error)
         }

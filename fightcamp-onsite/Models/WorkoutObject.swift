@@ -14,7 +14,7 @@ import Foundation
 
 // MARK: - Workout
 struct WorkoutObject: Codable {
-    let items: [Item]
+    let items: [Workout]
     let totalCount: Int
 
     enum CodingKeys: String, CodingKey {
@@ -24,7 +24,7 @@ struct WorkoutObject: Codable {
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct Workout: Codable {
     let id: Int
     let title, desc: String
     let type: TypeEnum
