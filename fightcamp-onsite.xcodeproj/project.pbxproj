@@ -16,13 +16,13 @@
 		8F17110F29E9B6950081AFFE /* fightcamp_onsiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17110E29E9B6950081AFFE /* fightcamp_onsiteTests.swift */; };
 		8F17111929E9B6950081AFFE /* fightcamp_onsiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17111829E9B6950081AFFE /* fightcamp_onsiteUITests.swift */; };
 		8F17111B29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17111A29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift */; };
-		8F17112D29E9B6C10081AFFE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17112A29E9B6C10081AFFE /* Fonts.swift */; };
-		8F17112E29E9B6C10081AFFE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17112B29E9B6C10081AFFE /* Layout.swift */; };
-		8F17112F29E9B6C10081AFFE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17112C29E9B6C10081AFFE /* Colors.swift */; };
 		8F17113129E9B6F10081AFFE /* WorkoutDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113029E9B6F10081AFFE /* WorkoutDataService.swift */; };
 		8F17113529E9B7350081AFFE /* WorkoutObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113429E9B7350081AFFE /* WorkoutObject.swift */; };
 		8F17113729E9B7C50081AFFE /* GenericDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113629E9B7C50081AFFE /* GenericDataService.swift */; };
 		8F17113929E9B92E0081AFFE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113829E9B92E0081AFFE /* ViewModel.swift */; };
+		8F7B558329E9BDB80041F0EC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558029E9BDB80041F0EC /* Fonts.swift */; };
+		8F7B558429E9BDB80041F0EC /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558129E9BDB80041F0EC /* Layout.swift */; };
+		8F7B558529E9BDB80041F0EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558229E9BDB80041F0EC /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		8F17111429E9B6950081AFFE /* fightcamp-onsiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fightcamp-onsiteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F17111829E9B6950081AFFE /* fightcamp_onsiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightcamp_onsiteUITests.swift; sourceTree = "<group>"; };
 		8F17111A29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightcamp_onsiteUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8F17112A29E9B6C10081AFFE /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		8F17112B29E9B6C10081AFFE /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		8F17112C29E9B6C10081AFFE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8F17113029E9B6F10081AFFE /* WorkoutDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataService.swift; sourceTree = "<group>"; };
 		8F17113429E9B7350081AFFE /* WorkoutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutObject.swift; sourceTree = "<group>"; };
 		8F17113629E9B7C50081AFFE /* GenericDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataService.swift; sourceTree = "<group>"; };
 		8F17113829E9B92E0081AFFE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8F7B558029E9BDB80041F0EC /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8F7B558129E9BDB80041F0EC /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		8F7B558229E9BDB80041F0EC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 		8F1710F629E9B6930081AFFE /* fightcamp-onsite */ = {
 			isa = PBXGroup;
 			children = (
+				8F7B557F29E9BDB80041F0EC /* Helpers */,
 				8F17113329E9B72F0081AFFE /* Models */,
-				8F17112929E9B6C10081AFFE /* Helpers */,
 				8F1710F729E9B6930081AFFE /* AppDelegate.swift */,
 				8F1710F929E9B6930081AFFE /* SceneDelegate.swift */,
 				8F1710FB29E9B6930081AFFE /* ViewController.swift */,
@@ -145,17 +145,6 @@
 			path = "fightcamp-onsiteUITests";
 			sourceTree = "<group>";
 		};
-		8F17112929E9B6C10081AFFE /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				8F17112A29E9B6C10081AFFE /* Fonts.swift */,
-				8F17112B29E9B6C10081AFFE /* Layout.swift */,
-				8F17112C29E9B6C10081AFFE /* Colors.swift */,
-			);
-			name = Helpers;
-			path = "../../fightcamp2/fightcamp-ios-trial/FightCamp-Trial/Helpers";
-			sourceTree = "<group>";
-		};
 		8F17113229E9B6F40081AFFE /* DataServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +160,16 @@
 				8F17113429E9B7350081AFFE /* WorkoutObject.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8F7B557F29E9BDB80041F0EC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8F7B558029E9BDB80041F0EC /* Fonts.swift */,
+				8F7B558129E9BDB80041F0EC /* Layout.swift */,
+				8F7B558229E9BDB80041F0EC /* Colors.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7B558329E9BDB80041F0EC /* Fonts.swift in Sources */,
+				8F7B558529E9BDB80041F0EC /* Colors.swift in Sources */,
 				8F17113929E9B92E0081AFFE /* ViewModel.swift in Sources */,
-				8F17112D29E9B6C10081AFFE /* Fonts.swift in Sources */,
 				8F17113729E9B7C50081AFFE /* GenericDataService.swift in Sources */,
 				8F17113529E9B7350081AFFE /* WorkoutObject.swift in Sources */,
-				8F17112F29E9B6C10081AFFE /* Colors.swift in Sources */,
 				8F1710FC29E9B6930081AFFE /* ViewController.swift in Sources */,
-				8F17112E29E9B6C10081AFFE /* Layout.swift in Sources */,
+				8F7B558429E9BDB80041F0EC /* Layout.swift in Sources */,
 				8F1710F829E9B6930081AFFE /* AppDelegate.swift in Sources */,
 				8F17113129E9B6F10081AFFE /* WorkoutDataService.swift in Sources */,
 				8F1710FA29E9B6930081AFFE /* SceneDelegate.swift in Sources */,
