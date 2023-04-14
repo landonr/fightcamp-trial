@@ -54,11 +54,11 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.count - 1 &&
-            viewModel.count > 0 &&
-            collectionView.contentOffset.y > 0 {
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y > 0 &&
+            scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) &&
+            viewModel.count > 0) {
             Task {
                 do {
                     try await viewModel.loadNextPage()
@@ -66,6 +66,22 @@ extension ViewController: UICollectionViewDelegate {
                     print(error)
                 }
             }
+        }
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.count - 1 &&
+            viewModel.count > 0 &&
+            collectionView.contentOffset.y > 0 {
+//            Task {
+//                do {
+//                    try await viewModel.loadNextPage()
+//                } catch {
+//                    print(error)
+//                }
+//            }
         }
     }
 }

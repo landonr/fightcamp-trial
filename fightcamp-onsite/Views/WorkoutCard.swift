@@ -135,6 +135,7 @@ class WorkoutCard: UIView {
         stackView.pin(superView: contentView)
         stackView.addArrangedSubview(contentStackView)
         contentView.setHeightConstraint(.cardHeight)
+        contentView.widthAnchor.constraint(lessThanOrEqualToConstant: .maxCellWidth).isActive = true
     }
 
     private func setupRoundsStackView() {
