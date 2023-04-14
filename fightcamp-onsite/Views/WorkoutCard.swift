@@ -17,7 +17,7 @@ class WorkoutCard: UIView {
     let contentView: UIView = {
         let contentView = UIView()
         contentView.layer.cornerRadius = .cornerRadiusLarge
-        contentView.backgroundColor = .dynamicColor(light: .white, dark: .black)
+        contentView.backgroundColor = .dynamicColor(light: .white, dark: .brandGray4)
         contentView.clipsToBounds = true
         return contentView
     }()
@@ -67,7 +67,7 @@ class WorkoutCard: UIView {
     let roundNumberLabel: UILabel = {
         let label = UILabel()
         label.font = .title
-        label.textColor = .black
+        label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         label.text = "-1"
         label.textAlignment = .center
         return label
@@ -76,7 +76,7 @@ class WorkoutCard: UIView {
     let roundsLabel: UILabel = {
         let label = UILabel()
         label.font = .title
-        label.textColor = .black
+        label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         label.text = "RNDS"
         label.textAlignment = .center
         return label
@@ -86,9 +86,9 @@ class WorkoutCard: UIView {
         let label = UILabel()
         label.setContentHuggingPriority(.defaultLow, for: .vertical)
         label.font = .title
-        label.textColor = .darkText
-        label.text = "whats going on"
+        label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
@@ -96,8 +96,7 @@ class WorkoutCard: UIView {
         let label = UILabel()
         label.setContentHuggingPriority(.defaultHigh, for: .vertical)
         label.font = .detail
-        label.textColor = .darkText
-        label.text = "trainer name"
+        label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         return label
     }()
     
@@ -129,15 +128,15 @@ class WorkoutCard: UIView {
     
     fileprivate func setupRoundsStackView() {
         let roundNumberView = UIView()
-        roundNumberView.backgroundColor = .brandGray1
-        roundNumberView.layer.cornerRadius = .cornerRadiusSmall
+        roundNumberView.backgroundColor = .dynamicColor(light: .brandGray1, dark: .brandGray6)
+        roundNumberView.layer.cornerRadius = .cornerRadiusLarge
         roundNumberView.addSubview(roundNumberLabel)
         roundNumberView.anchorAspectRatio(1)
         roundNumberLabel.pin(superView: roundNumberView,
-                             topMargin: .cardPadding,
-                             leftMargin: .cardPadding,
-                             bottomMargin: .cardPadding,
-                             rightMargin: .cardPadding
+                             topMargin: .labelPaddingVertical,
+                             leftMargin: .labelPaddingHorizontal,
+                             bottomMargin: .labelPaddingVertical,
+                             rightMargin: .labelPaddingHorizontal
                          )
         
         roundsStackView.addArrangedSubview(roundNumberView)

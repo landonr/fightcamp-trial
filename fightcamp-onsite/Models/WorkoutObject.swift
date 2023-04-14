@@ -69,7 +69,15 @@ enum TypeEnum: String, Codable {
     case classic = "classic"
 }
 
-struct FullWorkout {
+struct FullWorkout: Hashable {    
     var workout: Workout
     var trainer: Trainer
+    
+    var hashValue: Int {
+         return workout.id
+     }
+
+     static func == (lhs: FullWorkout, rhs: FullWorkout) -> Bool {
+         lhs.workout.id == rhs.workout.id
+     }
 }

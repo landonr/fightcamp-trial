@@ -31,6 +31,8 @@
 		8F7B55A429E9D5F50041F0EC /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A329E9D5F50041F0EC /* ImageService.swift */; };
 		8F7B55A729E9F0220041F0EC /* WorkoutTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A629E9F0220041F0EC /* WorkoutTag.swift */; };
 		8F7B55A929E9F0310041F0EC /* WorkoutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A829E9F0310041F0EC /* WorkoutCard.swift */; };
+		8F7B55AB29E9F97D0041F0EC /* UICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55AA29E9F97D0041F0EC /* UICollectionViewLayout.swift */; };
+		8F7B55AD29E9F9940041F0EC /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55AC29E9F9940041F0EC /* WorkoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		8F7B55A329E9D5F50041F0EC /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageService.swift; path = "fightcamp-onsite/DataServices/ImageService.swift"; sourceTree = SOURCE_ROOT; };
 		8F7B55A629E9F0220041F0EC /* WorkoutTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTag.swift; sourceTree = "<group>"; };
 		8F7B55A829E9F0310041F0EC /* WorkoutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCard.swift; sourceTree = "<group>"; };
+		8F7B55AA29E9F97D0041F0EC /* UICollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayout.swift; sourceTree = "<group>"; };
+		8F7B55AC29E9F9940041F0EC /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 				8F7B558129E9BDB80041F0EC /* Layout.swift */,
 				8F7B558229E9BDB80041F0EC /* Colors.swift */,
 				8F7B55A129E9C7EB0041F0EC /* UIView.swift */,
+				8F7B55AA29E9F97D0041F0EC /* UICollectionViewLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			children = (
 				8F7B55A629E9F0220041F0EC /* WorkoutTag.swift */,
 				8F7B55A829E9F0310041F0EC /* WorkoutCard.swift */,
+				8F7B55AC29E9F9940041F0EC /* WorkoutCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				8F17113529E9B7350081AFFE /* WorkoutObject.swift in Sources */,
 				8F1710FC29E9B6930081AFFE /* ViewController.swift in Sources */,
 				8F7B558429E9BDB80041F0EC /* Layout.swift in Sources */,
+				8F7B55AD29E9F9940041F0EC /* WorkoutCell.swift in Sources */,
 				8F7B558729E9BEDF0041F0EC /* TrainerObject.swift in Sources */,
 				8F1710F829E9B6930081AFFE /* AppDelegate.swift in Sources */,
 				8F17113129E9B6F10081AFFE /* FCDataService.swift in Sources */,
@@ -361,6 +368,7 @@
 				8F1710FA29E9B6930081AFFE /* SceneDelegate.swift in Sources */,
 				8F7B558B29E9C30F0041F0EC /* TrainerDataService.swift in Sources */,
 				8F7B55A429E9D5F50041F0EC /* ImageService.swift in Sources */,
+				8F7B55AB29E9F97D0041F0EC /* UICollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

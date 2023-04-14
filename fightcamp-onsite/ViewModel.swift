@@ -11,7 +11,7 @@ import Combine
 class ViewModel {
     private let workoutService: IWorkoutDataService = WorkoutDataService()
     private let trainerService: ITrainerDataService = TrainerDataService()
-    private var workoutPage = 0
+    private var workoutOffset = 0
 
     private let itemSubject = CurrentValueSubject<[FullWorkout], Never>([])
     
@@ -19,10 +19,19 @@ class ViewModel {
         itemSubject.eraseToAnyPublisher()
     }
     
+    init() {
+        Task {
+            do {
+                _ = try await loadWorkouts()
+            } catch {
+                print(error)
+            }
+        }
+    }
     
     func loadTrainers() async {
         do {
-            let trainers = try await trainerService.loadTrainers()
+            _ = try await trainerService.loadTrainers()
         } catch {
             print(error)
         }
@@ -40,7 +49,7 @@ class ViewModel {
     
     func loadWorkouts() async throws {
         do {
-            let workouts = try await workoutService.loadWorkouts(page: workoutPage)
+            let workouts = try await workoutService.loadWorkouts(page: workoutOffset)
             for workout in workouts.items {
                 let trainer = try await loadTrainer(id: workout.trainerID)
                 var items = itemSubject.value
@@ -53,7 +62,7 @@ class ViewModel {
     }
     
     func loadNextPage() async throws {
-        workoutPage += 1
+        workoutOffset += 10
         try await loadWorkouts()
     }
 }

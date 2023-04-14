@@ -31,8 +31,7 @@ class GenericDataService {
         
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         components?.queryItems = [
-            URLQueryItem(name: "page", value: "\(page)"),
-            URLQueryItem(name: "pageSize", value: "\(pageSize)")
+            URLQueryItem(name: "offset", value: "\(page)")
         ]
         
         guard let apiUrl = components?.url else {
