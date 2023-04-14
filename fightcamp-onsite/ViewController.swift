@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 class ViewController: UIViewController {
-    private let viewModel = ViewModel()
+    private let viewModel: IViewModel = ViewModel()
     private var collectionViewCancellable: AnyCancellable?
     private var dataSource: UICollectionViewDiffableDataSource<Int, FullWorkout>?
     
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Fightcamp"
         view.backgroundColor = .dynamicColor(light: .brandGray1, dark: .brandGray6)
         view.addSubview(collectionView)
         collectionView.pin(superView: view)
@@ -65,6 +66,19 @@ extension ViewController: UIScrollViewDelegate {
                 } catch {
                     print(error)
                 }
+            }
+        }
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let fullWorkout = viewModel.getWorkoutAtIndex(index: indexPath.row) {
+            print(fullWorkout)
+            let view = WorkoutViewController()
+            view.configure(workout: fullWorkout)
+            DispatchQueue.main.async { [weak self] in
+                self?.navigationController?.pushViewController(view, animated: true)
             }
         }
     }

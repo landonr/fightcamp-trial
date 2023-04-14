@@ -22,5 +22,21 @@ class WorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(stackView)
+        stackView.pin(superView: view)
+        stackView.addArrangedSubview(mainImageView)
+    }
+    
+    func configure(workout: FullWorkout) {
+        Task {
+            do {
+                if let url = URL(string: workout.trainer.photoURL) {
+                    let image = try? await ImageService.getImage(url: url)
+                    DispatchQueue.main.async { [weak mainImageView] in
+                        mainImageView?.image = image
+                    }
+                }
+            }
+        }
     }
 }

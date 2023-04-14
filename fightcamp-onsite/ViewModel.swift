@@ -8,7 +8,14 @@
 import Foundation
 import Combine
 
-class ViewModel {
+protocol IViewModel {
+    var count: Int { get }
+    var items: AnyPublisher<[FullWorkout], Never> { get }
+    func loadNextPage() async throws
+    func getWorkoutAtIndex(index: Int) -> FullWorkout?
+}
+
+class ViewModel: IViewModel {
     private let workoutService: IWorkoutDataService = WorkoutDataService()
     private let trainerService: ITrainerDataService = TrainerDataService()
     private var workoutOffset = 0
@@ -74,5 +81,12 @@ class ViewModel {
         isLoading = true
         workoutOffset += 10
         try await loadWorkouts()
+    }
+    
+    func getWorkoutAtIndex(index: Int) -> FullWorkout? {
+        if itemSubject.value.count > index {
+            return itemSubject.value[index]
+        }
+        return nil
     }
 }
