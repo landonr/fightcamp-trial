@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IWorkoutDataService {
-    func loadWorkouts() async throws -> WorkoutObject
+    func loadWorkouts(page: Int) async throws -> WorkoutObject
 }
 
 private enum APIUrls {
@@ -26,10 +26,9 @@ private enum APIUrls {
 }
 
 class WorkoutDataService: IWorkoutDataService {
-    private var page = 0
-    private var pageSize = 10
+    private let pageSize = 10
     
-    func loadWorkouts() async throws -> WorkoutObject {
+    func loadWorkouts(page: Int = 0) async throws -> WorkoutObject {
         guard let url = APIUrls.workouts.url else {
             throw NetworkError.invalidURL
         }

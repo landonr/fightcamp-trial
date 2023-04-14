@@ -40,7 +40,7 @@ class TrainerDataService: ITrainerDataService {
     
     func loadTrainer(id: Int) async throws -> Trainer {
         if let trainer = trainerCache.filter { $0.id == id }.first {
-            print("loaded trainer from cache")
+            print("loaded trainer \(trainer.firstName) from cache")
             return trainer
         }
 

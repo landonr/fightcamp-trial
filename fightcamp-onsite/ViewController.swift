@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         Task {
             do {
                 _ = await viewModel.loadWorkouts()
+                _ = await viewModel.loadNextPage()
                 
             } catch {
                 print(error)

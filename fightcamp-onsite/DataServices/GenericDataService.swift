@@ -26,7 +26,9 @@ enum NetworkError: Error {
 }
 
 class GenericDataService {
-    static func loadJSON<T: Decodable>(from url: URL, page: Int = 1, pageSize: Int = 20) async throws -> T {
+    static func loadJSON<T: Decodable>(from url: URL, page: Int = 0, pageSize: Int = 20) async throws -> T {
+        print("loading \(url) page: \(page)")
+        
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         components?.queryItems = [
             URLQueryItem(name: "page", value: "\(page)"),
