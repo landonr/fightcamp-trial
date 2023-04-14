@@ -67,7 +67,7 @@ class WorkoutCard: UIView {
     private let roundsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = .cardPadding
+        stackView.spacing = .labelPaddingHorizontal
         stackView.distribution = .fill
         stackView.setWidthConstraint(.roundsWidth)
         return stackView
@@ -83,7 +83,7 @@ class WorkoutCard: UIView {
 
     private let roundsLabel: UILabel = {
         let label = UILabel()
-        label.font = .title
+        label.font = .title.withSize(12)
         label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         label.text = "RNDS"
         label.textAlignment = .center

@@ -69,19 +69,3 @@ extension ViewController: UIScrollViewDelegate {
         }
     }
 }
-
-extension ViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.count - 1 &&
-            viewModel.count > 0 &&
-            collectionView.contentOffset.y > 0 {
-//            Task {
-//                do {
-//                    try await viewModel.loadNextPage()
-//                } catch {
-//                    print(error)
-//                }
-//            }
-        }
-    }
-}
