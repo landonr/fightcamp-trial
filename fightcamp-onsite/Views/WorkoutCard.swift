@@ -13,7 +13,7 @@ class WorkoutCard: UIView {
         dateFormatter.dateFormat = "M/d/yy"
         return dateFormatter
     }()
-    
+
     let contentView: UIView = {
         let contentView = UIView()
         contentView.layer.cornerRadius = .cornerRadiusLarge
@@ -21,13 +21,13 @@ class WorkoutCard: UIView {
         contentView.clipsToBounds = true
         return contentView
     }()
-    
+
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         return stackView
     }()
-    
+
     let contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -41,7 +41,7 @@ class WorkoutCard: UIView {
         stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
-    
+
     let textStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -57,13 +57,13 @@ class WorkoutCard: UIView {
         stackView.distribution = .fill
         return stackView
     }()
-    
+
     let tagStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .bottom
         return stackView
     }()
-    
+
     let roundsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -72,7 +72,7 @@ class WorkoutCard: UIView {
         stackView.setWidthConstraint(40)
         return stackView
     }()
-    
+
     let roundNumberLabel: UILabel = {
         let label = UILabel()
         label.font = .title
@@ -81,7 +81,7 @@ class WorkoutCard: UIView {
         label.textAlignment = .center
         return label
     }()
-    
+
     let roundsLabel: UILabel = {
         let label = UILabel()
         label.font = .title
@@ -90,7 +90,7 @@ class WorkoutCard: UIView {
         label.textAlignment = .center
         return label
     }()
-    
+
     let titleLabel: UILabel = {
         let label = UILabel()
         label.setContentHuggingPriority(.defaultLow, for: .vertical)
@@ -100,7 +100,7 @@ class WorkoutCard: UIView {
         label.lineBreakMode = .byWordWrapping
         return label
     }()
-    
+
     let trainerLabel: UILabel = {
         let label = UILabel()
         label.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -110,9 +110,9 @@ class WorkoutCard: UIView {
         label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         return label
     }()
-    
+
     let tagView: WorkoutTag = WorkoutTag()
-    
+
     let mainImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleAspectFit
@@ -121,7 +121,7 @@ class WorkoutCard: UIView {
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+
     fileprivate func setupContentView() {
         addSubview(contentView)
         contentView.pin(
@@ -136,7 +136,7 @@ class WorkoutCard: UIView {
         stackView.addArrangedSubview(contentStackView)
         contentView.setHeightConstraint(.cardHeight)
     }
-    
+
     fileprivate func setupRoundsStackView() {
         let roundNumberView = UIView()
         roundNumberView.backgroundColor = .dynamicColor(light: .brandGray1, dark: .brandGray6)
@@ -149,14 +149,14 @@ class WorkoutCard: UIView {
                              bottomMargin: .labelPaddingVertical,
                              rightMargin: .labelPaddingHorizontal
                          )
-        
+
         roundsStackView.addArrangedSubview(roundNumberView)
         roundsStackView.addArrangedSubview(roundsLabel)
         roundsStackView.addArrangedSubview(UIView())
         roundsLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         contentStackView.addArrangedSubview(roundsStackView)
     }
-    
+
     fileprivate func setupTextStackView() {
         contentStackView.addArrangedSubview(textStackView)
         textStackView.addArrangedSubview(titleLabel)
@@ -164,7 +164,7 @@ class WorkoutCard: UIView {
         textStackView.addArrangedSubview(tagStackView)
         tagStackView.addArrangedSubview(tagView)
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         layer.shadowColor = UIColor.black.cgColor // Shadow color
@@ -176,11 +176,11 @@ class WorkoutCard: UIView {
         setupTextStackView()
         stackView.addArrangedSubview(mainImageView)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func setImage(urlString: String) {
         Task {
             do {
@@ -191,10 +191,11 @@ class WorkoutCard: UIView {
             }
         }
     }
-    
+
     func configure(workout: FullWorkout) {
         titleLabel.text = workout.workout.title
-        let dateString = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(workout.workout.added)))
+        let date = Date(timeIntervalSince1970: TimeInterval(workout.workout.added))
+        let dateString = date.isToday() ? "Today" : dateFormatter.string(from: date)
         trainerLabel.text = "\(workout.trainer.firstName) \(workout.trainer.lastName) • \(dateString)"
         setImage(urlString: workout.workout.previewImgURL)
         roundNumberLabel.text = "\(workout.workout.nbrRounds)"

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         )
         return collectionView
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .dynamicColor(light: .brandGray1, dark: .brandGray6)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             cell.configure(itemIdentifier)
             return cell
         })
-    
+
         collectionViewCancellable = viewModel.items
                     .receive(on: RunLoop.main)
                     .sink { [weak self] package in

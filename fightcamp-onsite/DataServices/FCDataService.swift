@@ -14,7 +14,7 @@ protocol IWorkoutDataService {
 private enum APIUrls {
     case workouts
     case workoutID(String)
-    
+
     var url: URL? {
         switch self {
         case .workouts:
@@ -27,7 +27,7 @@ private enum APIUrls {
 
 class WorkoutDataService: IWorkoutDataService {
     private let pageSize = 10
-    
+
     func loadWorkouts(page: Int = 0) async throws -> WorkoutObject {
         guard let url = APIUrls.workouts.url else {
             throw NetworkError.invalidURL

@@ -14,7 +14,7 @@ class WorkoutTag: UIView {
         label.textColor = .white
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(titleLabel)
@@ -28,11 +28,11 @@ class WorkoutTag: UIView {
         layer.cornerRadius = .cornerRadiusSmall
         titleLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func configure(tag: Level) {
         titleLabel.text = tag.title
         backgroundColor = tag.color

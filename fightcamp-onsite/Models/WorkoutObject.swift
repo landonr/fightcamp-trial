@@ -54,7 +54,7 @@ enum Level: String, Codable {
             return UIColor.accentGold
         }
     }
-    
+
     var title: String {
         switch self {
         case .allLevels:
@@ -69,10 +69,10 @@ enum TypeEnum: String, Codable {
     case classic = "classic"
 }
 
-struct FullWorkout: Hashable {    
+struct FullWorkout: Hashable {
     var workout: Workout
     var trainer: Trainer
-    
+
     var hashValue: Int {
          return workout.id
      }

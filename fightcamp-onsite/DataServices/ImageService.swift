@@ -26,7 +26,7 @@ class ImageService {
             return
         }
     }
-    
+
     static func getImageFromCache(url: URL) -> UIImage? {
         guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
             return nil
@@ -38,7 +38,7 @@ class ImageService {
             return nil
         }
     }
-    
+
     static func getImage(url: URL) async throws -> UIImage? {
         if let image = getImageFromCache(url: url) {
             print("got image from cache")

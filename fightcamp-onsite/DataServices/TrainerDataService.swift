@@ -15,7 +15,7 @@ protocol ITrainerDataService {
 private enum APIUrls {
     case trainers
     case trainerID(Int)
-    
+
     var url: URL? {
         switch self {
         case .trainers:
@@ -37,7 +37,7 @@ class TrainerDataService: ITrainerDataService {
         trainerCache = trainers.items
         return trainers
     }
-    
+
     func loadTrainer(id: Int) async throws -> Trainer {
         if let trainer = trainerCache.filter { $0.id == id }.first {
             print("loaded trainer \(trainer.firstName) from cache")
@@ -47,7 +47,7 @@ class TrainerDataService: ITrainerDataService {
         guard let url = APIUrls.trainerID(id).url else {
             throw NetworkError.invalidURL
         }
-        
+
         let trainer: Trainer = try await GenericDataService.loadJSON(from: url)
         trainerCache.append(trainer)
         return trainer
