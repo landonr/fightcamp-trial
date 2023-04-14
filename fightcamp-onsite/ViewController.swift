@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .dynamicColor(light: .brandGray1, dark: .brandGray6)
         view.addSubview(collectionView)
         collectionView.pin(superView: view)
-        
+        collectionView.delegate = self
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: WorkoutCell.identifier,
@@ -54,3 +54,18 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.count - 1 &&
+            viewModel.count > 0 &&
+            collectionView.contentOffset.y > 0 {
+            Task {
+                do {
+                    try await viewModel.loadNextPage()
+                } catch {
+                    print(error)
+                }
+            }
+        }
+    }
+}

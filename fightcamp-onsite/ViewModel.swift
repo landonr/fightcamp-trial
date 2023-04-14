@@ -12,9 +12,13 @@ class ViewModel {
     private let workoutService: IWorkoutDataService = WorkoutDataService()
     private let trainerService: ITrainerDataService = TrainerDataService()
     private var workoutOffset = 0
-
+    private var isLoading = false
     private let itemSubject = CurrentValueSubject<[FullWorkout], Never>([])
     
+    var count: Int {
+        itemSubject.value.count
+    }
+
     var items: AnyPublisher<[FullWorkout], Never> {
         itemSubject.eraseToAnyPublisher()
     }
@@ -56,12 +60,18 @@ class ViewModel {
                 items.append(FullWorkout(workout: workout, trainer: trainer))
                 itemSubject.send(items)
             }
+            isLoading = false
         } catch {
             print(error)
         }
     }
     
     func loadNextPage() async throws {
+        guard itemSubject.value.count > 0 && !isLoading else {
+            return
+        }
+        print("loading more workouts")
+        isLoading = true
         workoutOffset += 10
         try await loadWorkouts()
     }

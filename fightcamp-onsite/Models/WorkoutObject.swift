@@ -58,9 +58,9 @@ enum Level: String, Codable {
     var title: String {
         switch self {
         case .allLevels:
-            return "Open"
+            return "Open".uppercased()
         case .intermediate:
-            return "Interm"
+            return "Interm".uppercased()
         }
     }
 }

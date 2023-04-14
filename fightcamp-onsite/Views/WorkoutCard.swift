@@ -25,13 +25,13 @@ class WorkoutCard: UIView {
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = .cardPadding
         return stackView
     }()
     
     let contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
+        stackView.distribution = .fill
         stackView.layoutMargins = UIEdgeInsets(
             top: .cardPadding,
             left: .cardPadding,
@@ -50,10 +50,17 @@ class WorkoutCard: UIView {
             top: 0,
             left: .cardPadding,
             bottom: 0,
-            right: 0
+            right: .cardPadding
         )
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.spacing = .cardPadding
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
+    let tagStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.alignment = .bottom
         return stackView
     }()
     
@@ -61,6 +68,8 @@ class WorkoutCard: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = .cardPadding
+        stackView.distribution = .fill
+        stackView.setWidthConstraint(40)
         return stackView
     }()
     
@@ -96,6 +105,8 @@ class WorkoutCard: UIView {
         let label = UILabel()
         label.setContentHuggingPriority(.defaultHigh, for: .vertical)
         label.font = .detail
+        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
         label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
         return label
     }()
@@ -142,6 +153,7 @@ class WorkoutCard: UIView {
         roundsStackView.addArrangedSubview(roundNumberView)
         roundsStackView.addArrangedSubview(roundsLabel)
         roundsStackView.addArrangedSubview(UIView())
+        roundsLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         contentStackView.addArrangedSubview(roundsStackView)
     }
     
@@ -149,10 +161,8 @@ class WorkoutCard: UIView {
         contentStackView.addArrangedSubview(textStackView)
         textStackView.addArrangedSubview(titleLabel)
         textStackView.addArrangedSubview(trainerLabel)
-        textStackView.addArrangedSubview(UIView())
-        
-        tagView.setContentHuggingPriority(.defaultLow, for: .vertical)
-        textStackView.addArrangedSubview(tagView)
+        textStackView.addArrangedSubview(tagStackView)
+        tagStackView.addArrangedSubview(tagView)
     }
     
     override init(frame: CGRect) {

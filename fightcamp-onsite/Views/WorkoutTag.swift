@@ -26,6 +26,7 @@ class WorkoutTag: UIView {
             rightMargin: .labelPaddingHorizontal
         )
         layer.cornerRadius = .cornerRadiusSmall
+        titleLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
     
     required init?(coder: NSCoder) {
