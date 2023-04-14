@@ -25,6 +25,8 @@
 		8F7B558529E9BDB80041F0EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558229E9BDB80041F0EC /* Colors.swift */; };
 		8F7B558729E9BEDF0041F0EC /* TrainerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558629E9BEDF0041F0EC /* TrainerObject.swift */; };
 		8F7B558B29E9C30F0041F0EC /* TrainerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558A29E9C30F0041F0EC /* TrainerDataService.swift */; };
+		8F7B559F29E9C76A0041F0EC /* Font-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7B559D29E9C76A0041F0EC /* Font-1.otf */; };
+		8F7B55A029E9C76A0041F0EC /* Font-2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7B559E29E9C76A0041F0EC /* Font-2.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		8F7B558229E9BDB80041F0EC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8F7B558629E9BEDF0041F0EC /* TrainerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerObject.swift; sourceTree = "<group>"; };
 		8F7B558A29E9C30F0041F0EC /* TrainerDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerDataService.swift; sourceTree = "<group>"; };
+		8F7B559D29E9C76A0041F0EC /* Font-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-1.otf"; sourceTree = "<group>"; };
+		8F7B559E29E9C76A0041F0EC /* Font-2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-2.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		8F1710F629E9B6930081AFFE /* fightcamp-onsite */ = {
 			isa = PBXGroup;
 			children = (
+				8F7B559C29E9C76A0041F0EC /* Assets */,
 				8F7B557F29E9BDB80041F0EC /* Helpers */,
 				8F17113329E9B72F0081AFFE /* Models */,
 				8F1710F729E9B6930081AFFE /* AppDelegate.swift */,
@@ -176,6 +181,15 @@
 				8F7B558229E9BDB80041F0EC /* Colors.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8F7B559C29E9C76A0041F0EC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8F7B559D29E9C76A0041F0EC /* Font-1.otf */,
+				8F7B559E29E9C76A0041F0EC /* Font-2.otf */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +298,8 @@
 			files = (
 				8F17110429E9B6950081AFFE /* LaunchScreen.storyboard in Resources */,
 				8F17110129E9B6950081AFFE /* Assets.xcassets in Resources */,
+				8F7B55A029E9C76A0041F0EC /* Font-2.otf in Resources */,
+				8F7B559F29E9C76A0041F0EC /* Font-1.otf in Resources */,
 				8F1710FF29E9B6930081AFFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
