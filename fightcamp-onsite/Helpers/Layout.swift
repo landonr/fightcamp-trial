@@ -11,4 +11,8 @@ extension CGFloat {
     static let cardPreviewWidth: CGFloat = 12
     static let labelPaddingVertical: CGFloat = 4
     static let labelPaddingHorizontal: CGFloat = 6
+    
+    // added
+    static let cardHeight: CGFloat = 114
+    static let imageWidth: CGFloat = 150
 }

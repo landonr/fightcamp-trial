@@ -6,12 +6,20 @@
 //
 
 import Foundation
+import Combine
 
 class ViewModel {
     private let workoutService: IWorkoutDataService = WorkoutDataService()
     private let trainerService: ITrainerDataService = TrainerDataService()
     private var workoutPage = 0
 
+    private let itemSubject = CurrentValueSubject<[FullWorkout], Never>([])
+    
+    var items: AnyPublisher<[FullWorkout], Never> {
+        itemSubject.eraseToAnyPublisher()
+    }
+    
+    
     func loadTrainers() async {
         do {
             let trainers = try await trainerService.loadTrainers()
@@ -20,27 +28,32 @@ class ViewModel {
         }
     }
     
-    func loadTrainer(id: Int) async {
+    func loadTrainer(id: Int) async throws -> Trainer {
         do {
             let trainer = try await trainerService.loadTrainer(id: id)
+            return trainer
         } catch {
             print(error)
+            throw error
         }
     }
     
-    func loadWorkouts() async {
+    func loadWorkouts() async throws {
         do {
             let workouts = try await workoutService.loadWorkouts(page: workoutPage)
             for workout in workouts.items {
-                await loadTrainer(id: workout.trainerID)
+                let trainer = try await loadTrainer(id: workout.trainerID)
+                var items = itemSubject.value
+                items.append(FullWorkout(workout: workout, trainer: trainer))
+                itemSubject.send(items)
             }
         } catch {
             print(error)
         }
     }
     
-    func loadNextPage() async {
+    func loadNextPage() async throws {
         workoutPage += 1
-        await loadWorkouts()
+        try await loadWorkouts()
     }
 }

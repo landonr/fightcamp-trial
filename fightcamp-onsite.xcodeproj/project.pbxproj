@@ -27,6 +27,10 @@
 		8F7B558B29E9C30F0041F0EC /* TrainerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B558A29E9C30F0041F0EC /* TrainerDataService.swift */; };
 		8F7B559F29E9C76A0041F0EC /* Font-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7B559D29E9C76A0041F0EC /* Font-1.otf */; };
 		8F7B55A029E9C76A0041F0EC /* Font-2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7B559E29E9C76A0041F0EC /* Font-2.otf */; };
+		8F7B55A229E9C7EB0041F0EC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A129E9C7EB0041F0EC /* UIView.swift */; };
+		8F7B55A429E9D5F50041F0EC /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A329E9D5F50041F0EC /* ImageService.swift */; };
+		8F7B55A729E9F0220041F0EC /* WorkoutTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A629E9F0220041F0EC /* WorkoutTag.swift */; };
+		8F7B55A929E9F0310041F0EC /* WorkoutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55A829E9F0310041F0EC /* WorkoutCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		8F7B558A29E9C30F0041F0EC /* TrainerDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerDataService.swift; sourceTree = "<group>"; };
 		8F7B559D29E9C76A0041F0EC /* Font-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-1.otf"; sourceTree = "<group>"; };
 		8F7B559E29E9C76A0041F0EC /* Font-2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-2.otf"; sourceTree = "<group>"; };
+		8F7B55A129E9C7EB0041F0EC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8F7B55A329E9D5F50041F0EC /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageService.swift; path = "fightcamp-onsite/DataServices/ImageService.swift"; sourceTree = SOURCE_ROOT; };
+		8F7B55A629E9F0220041F0EC /* WorkoutTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTag.swift; sourceTree = "<group>"; };
+		8F7B55A829E9F0310041F0EC /* WorkoutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,7 @@
 		8F1710F629E9B6930081AFFE /* fightcamp-onsite */ = {
 			isa = PBXGroup;
 			children = (
+				8F7B55A529E9F01E0041F0EC /* Views */,
 				8F7B559C29E9C76A0041F0EC /* Assets */,
 				8F7B557F29E9BDB80041F0EC /* Helpers */,
 				8F17113329E9B72F0081AFFE /* Models */,
@@ -157,6 +166,7 @@
 		8F17113229E9B6F40081AFFE /* DataServices */ = {
 			isa = PBXGroup;
 			children = (
+				8F7B55A329E9D5F50041F0EC /* ImageService.swift */,
 				8F17113029E9B6F10081AFFE /* FCDataService.swift */,
 				8F7B558A29E9C30F0041F0EC /* TrainerDataService.swift */,
 				8F17113629E9B7C50081AFFE /* GenericDataService.swift */,
@@ -179,6 +189,7 @@
 				8F7B558029E9BDB80041F0EC /* Fonts.swift */,
 				8F7B558129E9BDB80041F0EC /* Layout.swift */,
 				8F7B558229E9BDB80041F0EC /* Colors.swift */,
+				8F7B55A129E9C7EB0041F0EC /* UIView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -190,6 +201,15 @@
 				8F7B559E29E9C76A0041F0EC /* Font-2.otf */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		8F7B55A529E9F01E0041F0EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F7B55A629E9F0220041F0EC /* WorkoutTag.swift */,
+				8F7B55A829E9F0310041F0EC /* WorkoutCard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7B55A229E9C7EB0041F0EC /* UIView.swift in Sources */,
+				8F7B55A929E9F0310041F0EC /* WorkoutCard.swift in Sources */,
 				8F7B558329E9BDB80041F0EC /* Fonts.swift in Sources */,
 				8F7B558529E9BDB80041F0EC /* Colors.swift in Sources */,
 				8F17113929E9B92E0081AFFE /* ViewModel.swift in Sources */,
@@ -335,8 +357,10 @@
 				8F7B558729E9BEDF0041F0EC /* TrainerObject.swift in Sources */,
 				8F1710F829E9B6930081AFFE /* AppDelegate.swift in Sources */,
 				8F17113129E9B6F10081AFFE /* FCDataService.swift in Sources */,
+				8F7B55A729E9F0220041F0EC /* WorkoutTag.swift in Sources */,
 				8F1710FA29E9B6930081AFFE /* SceneDelegate.swift in Sources */,
 				8F7B558B29E9C30F0041F0EC /* TrainerDataService.swift in Sources */,
+				8F7B55A429E9D5F50041F0EC /* ImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,10 +540,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fightcamp-onsite/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +554,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,10 +573,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fightcamp-onsite/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +587,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

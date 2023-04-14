@@ -11,6 +11,7 @@
 //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
+import UIKit
 
 // MARK: - Workout
 struct WorkoutObject: Codable {
@@ -45,8 +46,30 @@ struct Workout: Codable {
 enum Level: String, Codable {
     case allLevels = "all_levels"
     case intermediate = "intermediate"
+    var color: UIColor {
+        switch self {
+        case .allLevels:
+            return UIColor.accentBlue
+        case .intermediate:
+            return UIColor.accentGold
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .allLevels:
+            return "Open"
+        case .intermediate:
+            return "Interm"
+        }
+    }
 }
 
 enum TypeEnum: String, Codable {
     case classic = "classic"
+}
+
+struct FullWorkout {
+    var workout: Workout
+    var trainer: Trainer
 }
