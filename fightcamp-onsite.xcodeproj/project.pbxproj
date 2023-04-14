@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F1710F829E9B6930081AFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1710F729E9B6930081AFFE /* AppDelegate.swift */; };
+		8F1710FA29E9B6930081AFFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1710F929E9B6930081AFFE /* SceneDelegate.swift */; };
+		8F1710FC29E9B6930081AFFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1710FB29E9B6930081AFFE /* ViewController.swift */; };
+		8F1710FF29E9B6930081AFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1710FD29E9B6930081AFFE /* Main.storyboard */; };
+		8F17110129E9B6950081AFFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F17110029E9B6950081AFFE /* Assets.xcassets */; };
+		8F17110429E9B6950081AFFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F17110229E9B6950081AFFE /* LaunchScreen.storyboard */; };
+		8F17110F29E9B6950081AFFE /* fightcamp_onsiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17110E29E9B6950081AFFE /* fightcamp_onsiteTests.swift */; };
+		8F17111929E9B6950081AFFE /* fightcamp_onsiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17111829E9B6950081AFFE /* fightcamp_onsiteUITests.swift */; };
+		8F17111B29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17111A29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift */; };
+		8F17112D29E9B6C10081AFFE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17112A29E9B6C10081AFFE /* Fonts.swift */; };
+		8F17112E29E9B6C10081AFFE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17112B29E9B6C10081AFFE /* Layout.swift */; };
+		8F17112F29E9B6C10081AFFE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17112C29E9B6C10081AFFE /* Colors.swift */; };
+		8F17113129E9B6F10081AFFE /* WorkoutDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113029E9B6F10081AFFE /* WorkoutDataService.swift */; };
+		8F17113529E9B7350081AFFE /* WorkoutObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113429E9B7350081AFFE /* WorkoutObject.swift */; };
+		8F17113729E9B7C50081AFFE /* GenericDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113629E9B7C50081AFFE /* GenericDataService.swift */; };
+		8F17113929E9B92E0081AFFE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17113829E9B92E0081AFFE /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F17110B29E9B6950081AFFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F1710EC29E9B6930081AFFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F1710F329E9B6930081AFFE;
+			remoteInfo = "fightcamp-onsite";
+		};
+		8F17111529E9B6950081AFFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F1710EC29E9B6930081AFFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F1710F329E9B6930081AFFE;
+			remoteInfo = "fightcamp-onsite";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F1710F429E9B6930081AFFE /* fightcamp-onsite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fightcamp-onsite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1710F729E9B6930081AFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F1710F929E9B6930081AFFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F1710FB29E9B6930081AFFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F1710FE29E9B6930081AFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F17110029E9B6950081AFFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F17110329E9B6950081AFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F17110529E9B6950081AFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F17110A29E9B6950081AFFE /* fightcamp-onsiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fightcamp-onsiteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F17110E29E9B6950081AFFE /* fightcamp_onsiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightcamp_onsiteTests.swift; sourceTree = "<group>"; };
+		8F17111429E9B6950081AFFE /* fightcamp-onsiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fightcamp-onsiteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F17111829E9B6950081AFFE /* fightcamp_onsiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightcamp_onsiteUITests.swift; sourceTree = "<group>"; };
+		8F17111A29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightcamp_onsiteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F17112A29E9B6C10081AFFE /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8F17112B29E9B6C10081AFFE /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		8F17112C29E9B6C10081AFFE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8F17113029E9B6F10081AFFE /* WorkoutDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataService.swift; sourceTree = "<group>"; };
+		8F17113429E9B7350081AFFE /* WorkoutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutObject.swift; sourceTree = "<group>"; };
+		8F17113629E9B7C50081AFFE /* GenericDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataService.swift; sourceTree = "<group>"; };
+		8F17113829E9B92E0081AFFE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F1710F129E9B6930081AFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F17110729E9B6950081AFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F17111129E9B6950081AFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F1710EB29E9B6930081AFFE = {
+			isa = PBXGroup;
+			children = (
+				8F1710F629E9B6930081AFFE /* fightcamp-onsite */,
+				8F17110D29E9B6950081AFFE /* fightcamp-onsiteTests */,
+				8F17111729E9B6950081AFFE /* fightcamp-onsiteUITests */,
+				8F1710F529E9B6930081AFFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F1710F529E9B6930081AFFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F1710F429E9B6930081AFFE /* fightcamp-onsite.app */,
+				8F17110A29E9B6950081AFFE /* fightcamp-onsiteTests.xctest */,
+				8F17111429E9B6950081AFFE /* fightcamp-onsiteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F1710F629E9B6930081AFFE /* fightcamp-onsite */ = {
+			isa = PBXGroup;
+			children = (
+				8F17113329E9B72F0081AFFE /* Models */,
+				8F17112929E9B6C10081AFFE /* Helpers */,
+				8F1710F729E9B6930081AFFE /* AppDelegate.swift */,
+				8F1710F929E9B6930081AFFE /* SceneDelegate.swift */,
+				8F1710FB29E9B6930081AFFE /* ViewController.swift */,
+				8F17113829E9B92E0081AFFE /* ViewModel.swift */,
+				8F17113229E9B6F40081AFFE /* DataServices */,
+				8F1710FD29E9B6930081AFFE /* Main.storyboard */,
+				8F17110029E9B6950081AFFE /* Assets.xcassets */,
+				8F17110229E9B6950081AFFE /* LaunchScreen.storyboard */,
+				8F17110529E9B6950081AFFE /* Info.plist */,
+			);
+			path = "fightcamp-onsite";
+			sourceTree = "<group>";
+		};
+		8F17110D29E9B6950081AFFE /* fightcamp-onsiteTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F17110E29E9B6950081AFFE /* fightcamp_onsiteTests.swift */,
+			);
+			path = "fightcamp-onsiteTests";
+			sourceTree = "<group>";
+		};
+		8F17111729E9B6950081AFFE /* fightcamp-onsiteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F17111829E9B6950081AFFE /* fightcamp_onsiteUITests.swift */,
+				8F17111A29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift */,
+			);
+			path = "fightcamp-onsiteUITests";
+			sourceTree = "<group>";
+		};
+		8F17112929E9B6C10081AFFE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8F17112A29E9B6C10081AFFE /* Fonts.swift */,
+				8F17112B29E9B6C10081AFFE /* Layout.swift */,
+				8F17112C29E9B6C10081AFFE /* Colors.swift */,
+			);
+			name = Helpers;
+			path = "../../fightcamp2/fightcamp-ios-trial/FightCamp-Trial/Helpers";
+			sourceTree = "<group>";
+		};
+		8F17113229E9B6F40081AFFE /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				8F17113029E9B6F10081AFFE /* WorkoutDataService.swift */,
+				8F17113629E9B7C50081AFFE /* GenericDataService.swift */,
+			);
+			path = DataServices;
+			sourceTree = "<group>";
+		};
+		8F17113329E9B72F0081AFFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F17113429E9B7350081AFFE /* WorkoutObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F1710F329E9B6930081AFFE /* fightcamp-onsite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F17111E29E9B6950081AFFE /* Build configuration list for PBXNativeTarget "fightcamp-onsite" */;
+			buildPhases = (
+				8F1710F029E9B6930081AFFE /* Sources */,
+				8F1710F129E9B6930081AFFE /* Frameworks */,
+				8F1710F229E9B6930081AFFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fightcamp-onsite";
+			productName = "fightcamp-onsite";
+			productReference = 8F1710F429E9B6930081AFFE /* fightcamp-onsite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F17110929E9B6950081AFFE /* fightcamp-onsiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F17112129E9B6950081AFFE /* Build configuration list for PBXNativeTarget "fightcamp-onsiteTests" */;
+			buildPhases = (
+				8F17110629E9B6950081AFFE /* Sources */,
+				8F17110729E9B6950081AFFE /* Frameworks */,
+				8F17110829E9B6950081AFFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F17110C29E9B6950081AFFE /* PBXTargetDependency */,
+			);
+			name = "fightcamp-onsiteTests";
+			productName = "fightcamp-onsiteTests";
+			productReference = 8F17110A29E9B6950081AFFE /* fightcamp-onsiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F17111329E9B6950081AFFE /* fightcamp-onsiteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F17112429E9B6950081AFFE /* Build configuration list for PBXNativeTarget "fightcamp-onsiteUITests" */;
+			buildPhases = (
+				8F17111029E9B6950081AFFE /* Sources */,
+				8F17111129E9B6950081AFFE /* Frameworks */,
+				8F17111229E9B6950081AFFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F17111629E9B6950081AFFE /* PBXTargetDependency */,
+			);
+			name = "fightcamp-onsiteUITests";
+			productName = "fightcamp-onsiteUITests";
+			productReference = 8F17111429E9B6950081AFFE /* fightcamp-onsiteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F1710EC29E9B6930081AFFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8F1710F329E9B6930081AFFE = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					8F17110929E9B6950081AFFE = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 8F1710F329E9B6930081AFFE;
+					};
+					8F17111329E9B6950081AFFE = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 8F1710F329E9B6930081AFFE;
+					};
+				};
+			};
+			buildConfigurationList = 8F1710EF29E9B6930081AFFE /* Build configuration list for PBXProject "fightcamp-onsite" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F1710EB29E9B6930081AFFE;
+			productRefGroup = 8F1710F529E9B6930081AFFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F1710F329E9B6930081AFFE /* fightcamp-onsite */,
+				8F17110929E9B6950081AFFE /* fightcamp-onsiteTests */,
+				8F17111329E9B6950081AFFE /* fightcamp-onsiteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F1710F229E9B6930081AFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F17110429E9B6950081AFFE /* LaunchScreen.storyboard in Resources */,
+				8F17110129E9B6950081AFFE /* Assets.xcassets in Resources */,
+				8F1710FF29E9B6930081AFFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F17110829E9B6950081AFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F17111229E9B6950081AFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F1710F029E9B6930081AFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F17113929E9B92E0081AFFE /* ViewModel.swift in Sources */,
+				8F17112D29E9B6C10081AFFE /* Fonts.swift in Sources */,
+				8F17113729E9B7C50081AFFE /* GenericDataService.swift in Sources */,
+				8F17113529E9B7350081AFFE /* WorkoutObject.swift in Sources */,
+				8F17112F29E9B6C10081AFFE /* Colors.swift in Sources */,
+				8F1710FC29E9B6930081AFFE /* ViewController.swift in Sources */,
+				8F17112E29E9B6C10081AFFE /* Layout.swift in Sources */,
+				8F1710F829E9B6930081AFFE /* AppDelegate.swift in Sources */,
+				8F17113129E9B6F10081AFFE /* WorkoutDataService.swift in Sources */,
+				8F1710FA29E9B6930081AFFE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F17110629E9B6950081AFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F17110F29E9B6950081AFFE /* fightcamp_onsiteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F17111029E9B6950081AFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F17111B29E9B6950081AFFE /* fightcamp_onsiteUITestsLaunchTests.swift in Sources */,
+				8F17111929E9B6950081AFFE /* fightcamp_onsiteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F17110C29E9B6950081AFFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F1710F329E9B6930081AFFE /* fightcamp-onsite */;
+			targetProxy = 8F17110B29E9B6950081AFFE /* PBXContainerItemProxy */;
+		};
+		8F17111629E9B6950081AFFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F1710F329E9B6930081AFFE /* fightcamp-onsite */;
+			targetProxy = 8F17111529E9B6950081AFFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F1710FD29E9B6930081AFFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F1710FE29E9B6930081AFFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F17110229E9B6950081AFFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F17110329E9B6950081AFFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F17111C29E9B6950081AFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F17111D29E9B6950081AFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F17111F29E9B6950081AFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "fightcamp-onsite/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F17112029E9B6950081AFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "fightcamp-onsite/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F17112229E9B6950081AFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsiteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fightcamp-onsite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fightcamp-onsite";
+			};
+			name = Debug;
+		};
+		8F17112329E9B6950081AFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsiteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fightcamp-onsite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fightcamp-onsite";
+			};
+			name = Release;
+		};
+		8F17112529E9B6950081AFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsiteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "fightcamp-onsite";
+			};
+			name = Debug;
+		};
+		8F17112629E9B6950081AFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lando.fightcamp-onsiteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "fightcamp-onsite";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F1710EF29E9B6930081AFFE /* Build configuration list for PBXProject "fightcamp-onsite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F17111C29E9B6950081AFFE /* Debug */,
+				8F17111D29E9B6950081AFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F17111E29E9B6950081AFFE /* Build configuration list for PBXNativeTarget "fightcamp-onsite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F17111F29E9B6950081AFFE /* Debug */,
+				8F17112029E9B6950081AFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F17112129E9B6950081AFFE /* Build configuration list for PBXNativeTarget "fightcamp-onsiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F17112229E9B6950081AFFE /* Debug */,
+				8F17112329E9B6950081AFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F17112429E9B6950081AFFE /* Build configuration list for PBXNativeTarget "fightcamp-onsiteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F17112529E9B6950081AFFE /* Debug */,
+				8F17112629E9B6950081AFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F1710EC29E9B6930081AFFE /* Project object */;
+}
