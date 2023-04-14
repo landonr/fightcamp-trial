@@ -14,15 +14,15 @@ class ViewModel {
     private var workoutOffset = 0
     private var isLoading = false
     private let itemSubject = CurrentValueSubject<[FullWorkout], Never>([])
-
+    
     var count: Int {
         itemSubject.value.count
     }
-
+    
     var items: AnyPublisher<[FullWorkout], Never> {
         itemSubject.eraseToAnyPublisher()
     }
-
+    
     init() {
         Task {
             do {
@@ -32,7 +32,7 @@ class ViewModel {
             }
         }
     }
-
+    
     func loadTrainers() async {
         do {
             _ = try await trainerService.loadTrainers()
@@ -40,7 +40,7 @@ class ViewModel {
             print(error)
         }
     }
-
+    
     func loadTrainer(id: Int) async throws -> Trainer {
         do {
             let trainer = try await trainerService.loadTrainer(id: id)
@@ -50,7 +50,7 @@ class ViewModel {
             throw error
         }
     }
-
+    
     func loadWorkouts() async throws {
         do {
             let workouts = try await workoutService.loadWorkouts(page: workoutOffset)
@@ -65,7 +65,7 @@ class ViewModel {
             print(error)
         }
     }
-
+    
     func loadNextPage() async throws {
         guard itemSubject.value.count > 0 && !isLoading else {
             return

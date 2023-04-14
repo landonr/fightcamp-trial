@@ -17,7 +17,7 @@ import UIKit
 struct WorkoutObject: Codable {
     let items: [Workout]
     let totalCount: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case items
         case totalCount = "total_count"
@@ -33,7 +33,7 @@ struct Workout: Codable {
     let previewImgURL: String
     let level: Level
     let trainerID: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case id, title, desc, type, added
         case nbrRounds = "nbr_rounds"
@@ -54,7 +54,7 @@ enum Level: String, Codable {
             return UIColor.accentGold
         }
     }
-
+    
     var title: String {
         switch self {
         case .allLevels:
@@ -67,17 +67,4 @@ enum Level: String, Codable {
 
 enum TypeEnum: String, Codable {
     case classic = "classic"
-}
-
-struct FullWorkout: Hashable {
-    var workout: Workout
-    var trainer: Trainer
-
-    var hashValue: Int {
-         return workout.id
-     }
-
-     static func == (lhs: FullWorkout, rhs: FullWorkout) -> Bool {
-         lhs.workout.id == rhs.workout.id
-     }
 }

@@ -17,7 +17,7 @@ struct Trainer: Codable {
     let id: Int
     let firstName, lastName: String
     let photoURL: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"
