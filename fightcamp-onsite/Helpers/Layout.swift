@@ -16,4 +16,6 @@ extension CGFloat {
     static let cardHeight: CGFloat = 114
     static let imageWidth: CGFloat = 150
     static let maxCellWidth: CGFloat = 500
+    static let titleLineHeight: CGFloat = 4
+    static let roundsWidth: CGFloat = 40
 }

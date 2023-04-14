@@ -69,15 +69,14 @@ class WorkoutCard: UIView {
         stackView.axis = .vertical
         stackView.spacing = .cardPadding
         stackView.distribution = .fill
-        stackView.setWidthConstraint(40)
+        stackView.setWidthConstraint(.roundsWidth)
         return stackView
     }()
 
     private let roundNumberLabel: UILabel = {
         let label = UILabel()
-        label.font = .title
+        label.font = .title.withSize(20)
         label.textColor = .dynamicColor(light: .darkText, dark: .lightText)
-        label.text = "-1"
         label.textAlignment = .center
         return label
     }()
@@ -115,7 +114,6 @@ class WorkoutCard: UIView {
 
     private let mainImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
-        imageView.contentMode = .scaleAspectFit
         imageView.setWidthConstraint(.imageWidth)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -145,12 +143,13 @@ class WorkoutCard: UIView {
         roundNumberView.addSubview(roundNumberLabel)
         roundNumberView.anchorAspectRatio(1)
         roundNumberLabel.pin(superView: roundNumberView,
-                             topMargin: .labelPaddingVertical,
+                             topMargin: .labelPaddingHorizontal,
                              leftMargin: .labelPaddingHorizontal,
-                             bottomMargin: .labelPaddingVertical,
+                             bottomMargin: .labelPaddingHorizontal,
                              rightMargin: .labelPaddingHorizontal
                          )
 
+        roundsStackView.alignment = .center
         roundsStackView.addArrangedSubview(roundNumberView)
         roundsStackView.addArrangedSubview(roundsLabel)
         roundsStackView.addArrangedSubview(UIView())
@@ -194,9 +193,18 @@ class WorkoutCard: UIView {
             }
         }
     }
+    
+    func setTitle(title: String) {
+        let attributeString = NSMutableAttributedString(string: title)
+        let style = NSMutableParagraphStyle()
+
+        style.lineSpacing = .titleLineHeight
+        attributeString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSMakeRange(0, title.count))
+        titleLabel.attributedText = attributeString
+    }
 
     func configure(workout: FullWorkout) {
-        titleLabel.text = workout.workout.title
+        setTitle(title: workout.workout.title)
         let date = Date(timeIntervalSince1970: TimeInterval(workout.workout.added))
         let dateString = date.isToday() ? "Today" : dateFormatter.string(from: date)
         trainerLabel.text = "\(workout.trainer.firstName) \(workout.trainer.lastName) • \(dateString)"

@@ -35,6 +35,7 @@
 		8F7B55AD29E9F9940041F0EC /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55AC29E9F9940041F0EC /* WorkoutCell.swift */; };
 		8F7B55AF29EA09910041F0EC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55AE29EA09910041F0EC /* Date.swift */; };
 		8F7B55B129EA0C1A0041F0EC /* FullWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55B029EA0C1A0041F0EC /* FullWorkout.swift */; };
+		8F7B55B529EA14880041F0EC /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B55B429EA14880041F0EC /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		8F7B55AC29E9F9940041F0EC /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		8F7B55AE29EA09910041F0EC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8F7B55B029EA0C1A0041F0EC /* FullWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWorkout.swift; sourceTree = "<group>"; };
+		8F7B55B429EA14880041F0EC /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				8F1710F729E9B6930081AFFE /* AppDelegate.swift */,
 				8F1710F929E9B6930081AFFE /* SceneDelegate.swift */,
 				8F1710FB29E9B6930081AFFE /* ViewController.swift */,
+				8F7B55B429EA14880041F0EC /* WorkoutViewController.swift */,
 				8F17113829E9B92E0081AFFE /* ViewModel.swift */,
 				8F17113229E9B6F40081AFFE /* DataServices */,
 				8F1710FD29E9B6930081AFFE /* Main.storyboard */,
@@ -366,6 +369,7 @@
 				8F17113529E9B7350081AFFE /* WorkoutObject.swift in Sources */,
 				8F1710FC29E9B6930081AFFE /* ViewController.swift in Sources */,
 				8F7B558429E9BDB80041F0EC /* Layout.swift in Sources */,
+				8F7B55B529EA14880041F0EC /* WorkoutViewController.swift in Sources */,
 				8F7B55AD29E9F9940041F0EC /* WorkoutCell.swift in Sources */,
 				8F7B558729E9BEDF0041F0EC /* TrainerObject.swift in Sources */,
 				8F1710F829E9B6930081AFFE /* AppDelegate.swift in Sources */,
