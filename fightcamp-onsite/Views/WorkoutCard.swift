@@ -152,7 +152,7 @@ class WorkoutCard: UIView {
         roundsStackView.alignment = .center
         roundsStackView.addArrangedSubview(roundNumberView)
         roundsStackView.addArrangedSubview(roundsLabel)
-        roundsStackView.addArrangedSubview(UIView())
+        roundsStackView.addArrangedSubview(UIView()) // this is a hack
         roundsLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         contentStackView.addArrangedSubview(roundsStackView)
     }

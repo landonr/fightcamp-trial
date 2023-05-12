@@ -32,7 +32,9 @@ class ViewController: UIViewController {
         view.backgroundColor = .dynamicColor(light: .brandGray1, dark: .brandGray6)
         view.addSubview(collectionView)
         collectionView.pin(superView: view)
+        
         collectionView.delegate = self
+        
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: WorkoutCell.identifier,
@@ -60,9 +62,9 @@ extension ViewController: UIScrollViewDelegate {
         if (scrollView.contentOffset.y > 0 &&
             scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) &&
             viewModel.count > 0) {
-            Task {
+            Task { [weak viewModel] in
                 do {
-                    try await viewModel.loadNextPage()
+                    try await viewModel?.loadNextPage()
                 } catch {
                     print(error)
                 }
