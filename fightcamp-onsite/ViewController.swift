@@ -62,9 +62,9 @@ extension ViewController: UIScrollViewDelegate {
         if (scrollView.contentOffset.y > 0 &&
             scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) &&
             viewModel.count > 0) {
-            Task { [weak viewModel] in
+            Task { [weak self] in
                 do {
-                    try await viewModel?.loadNextPage()
+                    try await self?.viewModel.loadNextPage()
                 } catch {
                     print(error)
                 }
