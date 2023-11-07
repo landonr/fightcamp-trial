@@ -54,7 +54,7 @@ jobs:
       - name: Select Xcode
         run: sudo Xcode-select -switch /Applications/Xcode_15.0.1.app
       - name: Build
-        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests build-for-testing -destination 'generic/platform=iOS'
+        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests build-for-testing -destination 'generic/platform=iOS' -allowProvisioningUpdates
       - name: Test
         run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests -destination 'generic/platform=iOS'
       - name: Test UI
