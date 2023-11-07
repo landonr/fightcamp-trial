@@ -20,20 +20,17 @@ jobs:
         env:
           BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
           P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
-          BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
-          TEST_PROVISION_PROFILE_BASE64: ${{ secrets.TEST_PROVISION_PROFILE_BASE64 }}
+          BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROFILE_TAR }}
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
         run: |
           # create variables
           CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
-          PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
-          PP_TEST_PATH=$RUNNER_TEMP/test_pp.mobileprovision
+          PP_PATH=$RUNNER_TEMP/build_pp.tar.gz
           KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
 
           # import certificate and provisioning profile from secrets
           echo -n "$BUILD_CERTIFICATE_BASE64" | base64 --decode -o $CERTIFICATE_PATH
-          echo -n "$BUILD_PROVISION_PROFILE_BASE64" | base64 --decode -o $PP_PATH
-          echo -n "$TEST_PROVISION_PROFILE_BASE64" | base64 --decode -o $PP_TEST_PATH
+          echo -n "$BUILD_PROVISION_PROFILE_BASE64" | base64 --decode -o $PP_PATH | 
 
           # create temporary keychain
           security create-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
@@ -46,16 +43,15 @@ jobs:
 
           # apply provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
-          cp $PP_TEST_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+          tar -xzf $RUNNER_TEMP/build_pp.tar.gz -C ~/Library/MobileDevice/Provisioning\ Profiles
           
           # list profiles
           ls ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Select Xcode
         run: sudo Xcode-select -switch /Applications/Xcode_15.0.1.app
       - name: Build
-        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests build-for-testing -destination 'generic/platform=iOS' -allowProvisioningUpdates
+        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests build-for-testing -destination 'generic/platform=iOS'
       - name: Test
-        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests -destination 'generic/platform=iOS'
+        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests -destination 'platform=iOS Simulator'
       - name: Test UI
         run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteUITests -destination 'platform=iOS Simulator'
