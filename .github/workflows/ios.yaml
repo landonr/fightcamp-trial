@@ -48,6 +48,9 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_TEST_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+          
+          # list profiles
+          ls ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Select Xcode
         run: sudo Xcode-select -switch /Applications/Xcode_15.0.1.app
       - name: Build
