@@ -52,6 +52,6 @@ jobs:
       - name: Build
         run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests build-for-testing -destination 'generic/platform=iOS'
       - name: Test
-        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests -destination 'platform=iOS Simulator'
+        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteTests -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
       - name: Test UI
-        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteUITests -destination 'platform=iOS Simulator'
+        run: xcodebuild -project fightcamp-onsite.xcodeproj -scheme fightcamp-onsiteUITests -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
